@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/projeto_cad_usuarios/app_cad_usuarios/templates/usuarios/login/stylelogin/stylelogin.css">
+    <script src="https://kit.fontawesome.com/2361fb232c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+         <a class="cabecalho__menu__link" href="/projeto_cad_usuarios/app_cad_usuarios/templates/usuarios/index.html">Home</a>
+         <a class="cabecalho__menu__link" href="/projeto_cad_usuarios/app_cad_usuarios/templates/usuarios/about.html">Sobre Nós</a>
+         <a class="cabecalho__menu__link" href="/projeto_cad_usuarios/app_cad_usuarios/templates/usuarios/login/login.html">Login</a>
+         <a class="cabecalho__menu__link" href="/projeto_cad_usuarios/app_cad_usuarios/templates/usuarios/ranking.html">Gráficos</a>
+        </nav>
+    </header>
+   <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Bem vindo a Gs motors</h2>
+                <p class="description description-primary">To keep connect with us</p>
+                <P class="description description-primary">please login with your personal info</P>
+                <button id="signin" class="btn btn-primary">sign in</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Crie sua conta</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="https://pt-br.facebook.com/">
+                            <li class="item-social-media">
+                            <i class="fa-brands fa-facebook"></i></li>
+                        </a>
+                        <a class="link-social-media" href="https://accounts.google.com/">
+                            <li class="item-social-media">
+                            <i class="fa-brands fa-google"></i></li>
+                        </a>
+                        <a class="link-social-media" href="https://account.apple.com/">
+                          <li class="item-social-media">
+                            <i class="fa-brands fa-apple"></i></li>
+                        </a>
+                    </ul>
+                </div><!--social media--> 
+                <form action="{% url 'listagem_usuarios' %}" method="post">
+                <p class="description description-second">or use your email for registration</p>
+                <form class="form">
+                    <label class="label-input">
+                        <i class="fa-solid fa-circle-user"></i>  
+                         <input name="nome" class="form-constrol-sm" type="text" placeholder="Name"> 
+                    </label>
+                    <label class="label-input">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input  name="email"  class="form-constrol-sm" type="email" placeholder="Email">
+                    </label>
+                    <label class="label-input">
+                        <i class="fa-solid fa-spinner"></i>
+                       <input name="cpf" class="form-constrol-sm" type="cpf" placeholder="CPF">
+                    </label>
+                    <label class="label-input">
+                        <i class="fa-solid fa-lock"></i>
+                        <input name="senha" class="form-constrol-sm" type="password" placeholder="Senha">
+                    </label>
+                    <button class="btn btn-second">sing up</button>
+                </form>
+            </form>
+            </div><!--second column-->
+        </div><!--first content-->
+        <di></di>
+    <div class="content second-content">
+        <div class="first-column">
+            <h2 class="title title-primary">Olá, amigos</h2>
+            <p class="description description-primary">insira seu dados pesoais</p>
+            <P class="description description-primary">and start journey with us</P>
+            <button id="signup" class="btn btn-primary">sign up</button>
+        </div>
+        <div class="second-column">
+            <h2 class="title title-second">Sign In to Developer</h2>
+            <div class="social-media">
+                <ul class="list-social-media">
+                    <a class="link-social-media" href="https://pt-br.facebook.com/">
+                        <li class="item-social-media">
+                        <i class="fa-brands fa-facebook"></i></li>
+                    </a>
+                    <a class="link-social-media" href="https://accounts.google.com/">
+                        <li class="item-social-media">
+                        <i class="fa-brands fa-google"></i></li>
+                    </a>
+                    <a class="link-social-media" href="https://account.apple.com/">
+                      <li class="item-social-media">
+                        <i class="fa-brands fa-apple"></i></li>
+                    </a>
+                </ul>
+            </div><!--social media-->
+            <p class="description description-second">or use your email for registration</p>
+            <form class="form">
+                <label class="label-input">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email">
+                </label>
+                <label class="label-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Senha">
+                </label>
+                <a class="password" href="#">Esqueceu sua senha?</a>
+                <button id="logar" class="btn btn-second">Entrar</button>
+            </form>
+        </div><!--second column-->
+   </div><!--second content-->
+   <script src="./javascript/app.js"></script>
+</body>
+</html>
